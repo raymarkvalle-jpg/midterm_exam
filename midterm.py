@@ -55,15 +55,25 @@ for match_num in range(1, 5):
         if result in ("W", "L"):
             break
         print("  Please enter W or L.")
+
     denominator = deaths if deaths > 0 else 1
     kda = (kills + assists) / denominator
 
     if kda >= 5 and result == "W":
+        tag = "DOMINATION!"
+    elif kda >= 5 and result == "L":
+        tag = "Carried Hard"
+    elif kda < 5 and result == "W":
+        tag = "Team Effort"
+    else:
         tag = "Better Luck Next Game"
 
     matches.append({
         "hero":   hero_name,
         "kda":    kda,
+        "result": result,
+        "tag":    tag,
+    })
 
 # --- Summary ---
 matches_played = len(matches)

@@ -1,0 +1,64 @@
+1. Ask for the player’s in-game name (IGN) and current rank (e.g., Epic, Legend, Mythic).
+ 
+2. Display the hero roster using a loop.
+ 
+3. Accept 4 match entries. For each match, ask the hero number (1–5). If the user types 0, that match slot is skipped (no stats recorded).
+ 
+4. If the hero number is valid (1–5), ask for kills, deaths, assists, and match result (W for win, L for loss).
+ 
+5. Compute KDA per match: KDA = (kills + assists) / deaths. If deaths is 0, use 1 as the denominator. Display KDA to 2 decimal places.
+ 
+6. Assign a performance tag based on KDA and result: KDA ≥ 5 and W → 'DOMINATION!'; KDA ≥ 5 and L → 'Carried Hard'; KDA < 5 and W → 'Team Effort'; KDA < 5 and L → 'Better Luck Next Game'.
+ 
+7. After all entries: count wins and losses among logged matches, compute win rate as a whole-number percentage (wins / matches_played × 100), and identify the match with the highest KDA as the Best Match. 
+ 
+8. Print a formatted match log showing: IGN, rank, each logged match (sequential number, hero, KDA, result, tag), win/loss record, win rate, and best match label.
+SAMPLE RUN
+In-game name (IGN): xKuroNeox
+Current rank: Legend
+ 
+==========================================
+   MOBILE LEGENDS -- HERO ROSTER
+==========================================
+ 1. Layla       [Marksman]
+ 2. Tigreal     [Tank]
+ 3. Gusion      [Assassin]
+ 4. Kagura      [Mage]
+ 5. Chou        [Fighter]
+==========================================
+ 
+--- MATCH 1 ---
+Hero number (0 to skip): 3
+Kills: 8
+Deaths: 2
+Assists: 4
+Result (W/L): W
+ 
+--- MATCH 2 ---
+Hero number (0 to skip): 1
+Kills: 3
+Deaths: 5
+Assists: 2
+Result (W/L): L
+ 
+--- MATCH 3 ---
+Hero number (0 to skip): 0
+ 
+--- MATCH 4 ---
+Hero number (0 to skip): 4
+Kills: 6
+Deaths: 1
+Assists: 9
+Result (W/L): W
+=============================================
+     xKuroNeox -- MATCH LOG (Legend)
+=============================================
+[1] Gusion      | KDA: 6.00  | WIN  | DOMINATION!
+[2] Layla       | KDA: 1.00  | LOSS | Better Luck Next Game
+[3] Kagura      | KDA: 15.00 | WIN  | DOMINATION!
+---------------------------------------------
+Matches Played : 3
+Wins : 2  |  Losses : 1
+Win Rate       : 66%
+Best Match     : [3] Kagura  (KDA: 15.00)
+=============================================

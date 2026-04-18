@@ -90,13 +90,4 @@ print(f"Wins : {wins}  |  Losses : {losses}")
 print(f"Win Rate       : {win_rate}%")
 if best:
     print(f"Best Match     : [{best_idx}] {best['hero']}  (KDA: {best['kda']:.2f})")
-print("=============================================")        "result": result,
-        "tag":    tag,
-    })
-        tag = "DOMINATION!"
-        tag = "Team Effort"
-    else:
-    elif kda >= 5 and result == "L":
-        tag = "Carried Hard"
-    elif kda < 5 and result == "W":
-
+print("=============================================")
